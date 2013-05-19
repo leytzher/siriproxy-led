@@ -10,7 +10,7 @@ require 'pp'
 # Remember to add other plugins to the "config.yml" file if you create them!
 ######
 
-class SiriProxy::Plugin::Led < SiriProxy::Plugin
+class SiriProxy::Plugin::led < SiriProxy::Plugin
   def initialize(config)
     #if you have custom configuration options, process them here!
   end
@@ -37,7 +37,7 @@ class SiriProxy::Plugin::Led < SiriProxy::Plugin
     request_completed #always complete your request! Otherwise the phone will "spin" at the user!
   end
 
-  listen_for /LED on/i do
+  listen_for /lights on/i do
     say "Turning on LED.."
     request_completed
     system("gpio mode 1 out")
@@ -46,7 +46,7 @@ class SiriProxy::Plugin::Led < SiriProxy::Plugin
     #system("gpio write 1 0")
   end
 
-  listen_for /LED off/i do
+  listen_for /lights off/i do
     say "Turning off LED."
     request_completed
     system("gpio mode 1 out")

@@ -42,16 +42,16 @@ listen_for /turn on LED/i do
     request_completed
     system("gpio mode 1 out")
     system("gpio write 1 1")
-    system("sleep 0.5")
-    system("gpio write 1 0")
+    #system("sleep 0.5")
+    #system("gpio write 1 0")
   end
 
   listen_for /turn off LED/i do
     say "Turning off LED."
     request_completed
     system("gpio mode 1 out")
-    system("gpio write 1 1")
-    system("sleep 0.5")
+    #system("gpio write 1 1")
+    #system("sleep 0.5")
     system("gpio write 1 0")
   end
 

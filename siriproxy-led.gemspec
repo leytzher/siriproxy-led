@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.name        = "siriproxy-led"
   s.version     = "1.0.0" 
   s.authors     = ["Leytzher"]
-  s.email       = ["leytzher@me.com"]
+  s.email       = [""]
   s.homepage    = ""
   s.summary     = %q{Control a LED using SiriProxy/.}
   s.description = %q{Say "On" and Siri will turn a LED.}

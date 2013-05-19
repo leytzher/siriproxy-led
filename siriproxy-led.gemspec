@@ -1,15 +1,14 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "siriproxy/version"
 
 Gem::Specification.new do |s|
   s.name        = "siriproxy-led"
-  s.version     = SiriProxy::VERSION
+  s.version     = "0.0.1" 
   s.authors     = ["leytzher"]
   s.email       = [""]
-  s.homepage    = "http://www.borneocircuits.com/"
-  s.summary     = %q{Switch on and off LEDs with Siri}
-  s.description = %q{Switch on and off LEDs using SiriProxy}
+  s.homepage    = ""
+  s.summary     = %q{Turn On Led using Siri}
+  s.description = %q{Turn On Led }
 
   s.rubyforge_project = "siriproxy-led"
 
@@ -18,13 +17,8 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/* 2> /dev/null`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.required_ruby_version = Gem::Requirement.new(">= 1.9.2")
-
-  s.add_runtime_dependency "CFPropertyList", "=2.1.2"
-  s.add_runtime_dependency "eventmachine"
-  s.add_runtime_dependency "uuidtools"
-  s.add_runtime_dependency "cora", "=0.0.4"
-  s.add_runtime_dependency "bundler"
-  s.add_runtime_dependency "rake"
-  s.add_runtime_dependency "rubydns", "~> 0.6.0"
+  # specify any dependencies here; for example:
+  # s.add_development_dependency "rspec"
+  # s.add_runtime_dependency "rest-client"
+  
 end

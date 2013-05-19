@@ -37,7 +37,7 @@ class SiriProxy::Plugin::Led < SiriProxy::Plugin
     request_completed #always complete your request! Otherwise the phone will "spin" at the user!
   end
 
-listen_for /turn on LED/i do
+listen_for /LED on/i do
     say "Turning on LED.."
     request_completed
     system("gpio mode 1 out")
@@ -46,7 +46,7 @@ listen_for /turn on LED/i do
     #system("gpio write 1 0")
   end
 
-  listen_for /turn off LED/i do
+  listen_for /LED off/i do
     say "Turning off LED."
     request_completed
     system("gpio mode 1 out")

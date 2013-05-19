@@ -30,6 +30,11 @@ class SiriProxy::Plugin::led < SiriProxy::Plugin
   listen_for /where am i/i do
     say "Your location is: #{location.address}"
   end
+  
+  listen_for /test me/i do
+    say "siriproxy led is working"
+    request_completed
+  end
 
   listen_for /test siri proxy/i do
     say "Siri Proxy is up and running!" #say something to the user!
